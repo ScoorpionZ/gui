@@ -1,5 +1,9 @@
 package view;
 
+import java.awt.List;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class MainForm extends javax.swing.JFrame {
 
     public MainForm() {
@@ -125,6 +129,11 @@ public class MainForm extends javax.swing.JFrame {
         jRadioButton2.setText("lapok összértéke");
 
         jButton3.setText("Mentés");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Kilépés");
 
@@ -236,6 +245,13 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_KockadobasActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // sdfskfldés
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+     public void adatKiiras(){
+        List<String> lista = Files.readAllLines(Paths.get(jFileChooser1.getSelectedFile().toString()));
+     }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
