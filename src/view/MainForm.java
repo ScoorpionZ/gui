@@ -29,6 +29,13 @@ public class MainForm extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        Mentes = new javax.swing.JMenu();
+        Kilepes = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        Kockadobas = new javax.swing.JRadioButtonMenuItem();
+        NemKockadobas = new javax.swing.JRadioButtonMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BlackJack");
@@ -145,6 +152,35 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jMenu1.setText("File");
+
+        Mentes.setText("Mentes");
+        jMenu1.add(Mentes);
+
+        Kilepes.setText("Kilepes");
+        jMenu1.add(Kilepes);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Strategia");
+
+        Kockadobas.setSelected(true);
+        Kockadobas.setText("Kockadobas");
+        Kockadobas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KockadobasActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Kockadobas);
+
+        NemKockadobas.setSelected(true);
+        NemKockadobas.setText("Nem kocskadobas");
+        jMenu2.add(NemKockadobas);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -174,6 +210,10 @@ public class MainForm extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void KockadobasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KockadobasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_KockadobasActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -207,6 +247,10 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu Kilepes;
+    private javax.swing.JRadioButtonMenuItem Kockadobas;
+    private javax.swing.JMenu Mentes;
+    private javax.swing.JRadioButtonMenuItem NemKockadobas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -216,6 +260,9 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
